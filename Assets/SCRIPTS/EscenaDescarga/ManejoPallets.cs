@@ -7,22 +7,6 @@ public class ManejoPallets : MonoBehaviour
 	public ControladorDeDescarga Controlador;
 	protected int Contador = 0;
 	
-	//-------------------------------------------------//
-
-	// Use this for initialization
-	void Start () 
-	{
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
-	}	
-	
-	//------------------------------------------------//
-	
 	public virtual bool Recibir(Pallet pallet)
 	{
 		Debug.Log(gameObject.name+" / Recibir()");
@@ -51,18 +35,4 @@ public class ManejoPallets : MonoBehaviour
 	{
 		//es el encargado de decidir si le da o no la bolsa
 	}
-	/*
-	protected Pallet Sacar()
-	{
-		if(Tenencia())
-		{
-			Pallet p = Pallets[0];
-			Pallets.RemoveAt(0);
-			return p;
-		}
-		else
-			return null;
-		
-	}
-	*/
 }

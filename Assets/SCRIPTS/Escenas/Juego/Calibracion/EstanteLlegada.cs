@@ -25,21 +25,10 @@ public class EstanteLlegada : ManejoPallets
 	
 	public override bool Recibir(Pallet p)
 	{
-		if(p.Portador == Mano)
-		{
-			if(p.CintaReceptora == gameObject)
-			{
-				//apaga el indicador de donde meter la bolsa
-				//Controlador.LlegadaPallet(p);
-				p.Portador = this.gameObject;
-				base.Recibir(p);
-				//p.transform.position = transform.position;
-				//p.GetComponent<Pallet>().enabled = false;
-				ContrCalib.FinTutorial();
-				
-				return true;
-			}
-		}
-		return false;
-	}
+        p.Portador = this.gameObject;
+        base.Recibir(p);
+        ContrCalib.FinTutorial();
+
+        return true;
+    }
 }

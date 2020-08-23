@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
 	public enum EstadoJuego{Calibrando, Jugando, Finalizado}
 	public EstadoJuego EstAct = EstadoJuego.Calibrando;
 	
-	PlayerInfo PlayerInfo1 = null;
-	PlayerInfo PlayerInfo2 = null;
+	public PlayerInfo PlayerInfo1 = null;
+	public PlayerInfo PlayerInfo2 = null;
 	
 	public Player Player1;
 	public Player Player2;
@@ -105,8 +105,8 @@ public class GameManager : MonoBehaviour
 		case EstadoJuego.Calibrando:
 			
 			//SKIP EL TUTORIAL
-			if(Input.GetKeyDown(KeyCode.Mouse0) || 
-			   Input.GetKeyDown(KeyCode.Keypad0))
+			if(Input.GetKey(KeyCode.Mouse0) &&
+			   Input.GetKey(KeyCode.Keypad0))
 			{
 				if(PlayerInfo1 != null && PlayerInfo2 != null)
 				{
@@ -118,20 +118,20 @@ public class GameManager : MonoBehaviour
 				}
 			}
 
-                if (Input.GetKeyDown(KeyCode.W)) {
-                    PlayerInfo1 = new PlayerInfo(1, Player1);
+                if (PlayerInfo1.PJ == null && Input.GetKeyDown(KeyCode.W)) {
+                    PlayerInfo1 = new PlayerInfo(0, Player1);
                     PlayerInfo1.LadoAct = Visualizacion.Lado.Izq;
                     SetPosicion(PlayerInfo1);
                 }
 
-                if (Input.GetKeyDown(KeyCode.UpArrow)) {
-                    PlayerInfo2 = new PlayerInfo(2, Player1);
+                if (PlayerInfo2.PJ == null && Input.GetKeyDown(KeyCode.UpArrow)) {
+                    PlayerInfo2 = new PlayerInfo(1, Player2);
                     PlayerInfo2.LadoAct = Visualizacion.Lado.Der;
                     SetPosicion(PlayerInfo2);
                 }
 			
 			//cuando los 2 pj terminaron los tutoriales empiesa la carrera
-			if(PlayerInfo1 != null && PlayerInfo2 != null)
+			if(PlayerInfo1.PJ != null && PlayerInfo2.PJ != null)
 			{
 				if(PlayerInfo1.FinTuto2 && PlayerInfo2.FinTuto2)
 				{
@@ -145,8 +145,8 @@ public class GameManager : MonoBehaviour
 		case EstadoJuego.Jugando:
 			
 			//SKIP LA CARRERA
-			if(Input.GetKeyDown(KeyCode.Mouse1) || 
-			   Input.GetKeyDown(KeyCode.Keypad0))
+			if(Input.GetKey(KeyCode.Mouse1) && 
+			   Input.GetKey(KeyCode.Keypad0))
 			{
 				TiempoDeJuego = 0;
 			}
@@ -520,7 +520,7 @@ public class GameManager : MonoBehaviour
 			PlayerInfo2.FinTuto1 = true;
 		}
 		
-		if(PlayerInfo1 != null && PlayerInfo2 != null)
+		if(PlayerInfo1.PJ != null && PlayerInfo2.PJ != null)
 			if(PlayerInfo1.FinTuto1 && PlayerInfo2.FinTuto1)
 				CambiarACarrera();//CambiarATutorial();
 		
@@ -529,7 +529,7 @@ public class GameManager : MonoBehaviour
 	
 	
 	
-	
+	[System.Serializable]
 	public class PlayerInfo
 	{
 		public PlayerInfo(int tipoDeInput, Player pj)

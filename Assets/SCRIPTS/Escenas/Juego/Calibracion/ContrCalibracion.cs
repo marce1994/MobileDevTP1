@@ -26,6 +26,7 @@ public class ContrCalibracion : MonoBehaviour
 	public ManejoPallets Partida;
 	public ManejoPallets Llegada;
 	public Pallet P;
+    public ManejoPallets palletsMover;
 	
 	GameManager GM;
 	
@@ -34,12 +35,12 @@ public class ContrCalibracion : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		/*
+        /*
 		renderer.enabled = false;
 		collider.enabled = false;
 		*/
-		
-		Pj.ContrCalib = this;
+        palletsMover.enabled = false;
+        Pj.ContrCalib = this;
 		
 		GM = GameObject.Find("GameMgr").GetComponent<GameManager>();
 		
@@ -63,11 +64,6 @@ public class ContrCalibracion : MonoBehaviour
 				}
 			}
 		}
-		
-		//prueba
-		if(Input.GetKeyDown(KeyCode.B))
-			IniciarTesteo();
-		
 		
 		/*
 		if(Calibrado)
@@ -141,13 +137,15 @@ public class ContrCalibracion : MonoBehaviour
 	public void IniciarTesteo()
 	{
 		EstAct = ContrCalibracion.Estados.Tutorial;
-		//Reiniciar();
-	}
+        palletsMover.enabled = true;
+        //Reiniciar();
+    }
 	
 	public void FinTutorial()
 	{
 		EstAct = ContrCalibracion.Estados.Finalizado;
-		GM.FinCalibracion(Pj.IdPlayer);
+        palletsMover.enabled = false;
+        GM.FinCalibracion(Pj.IdPlayer);
 	}
 	
 	void SetActivComp(bool estado)

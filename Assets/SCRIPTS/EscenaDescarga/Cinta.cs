@@ -89,25 +89,17 @@ public class Cinta : ManejoPallets
 
 	public override bool Recibir(Pallet p)
 	{
-		if(p.Portador == Mano)
-		{
-			if(p.CintaReceptora == gameObject)
-			{
-				//apaga el indicador de donde meter la bolsa
-				Tempo = 0;
-				Controlador.LlegadaPallet(p);
-				p.Portador = this.gameObject;
-				ConPallet = true;
-				ObjAct = p.transform;
-				base.Recibir(p);
-				//p.GetComponent<Pallet>().enabled = false;
-				Apagar();
-				
-				return true;
-			}
-		}
-		return false;
-	}
+        Tempo = 0;
+        Controlador.LlegadaPallet(p);
+        p.Portador = this.gameObject;
+        ConPallet = true;
+        ObjAct = p.transform;
+        base.Recibir(p);
+        //p.GetComponent<Pallet>().enabled = false;
+        Apagar();
+
+        return true;
+    }
 	
 	public void Encender()
 	{
