@@ -1,8 +1,38 @@
 fileFormatVersion: 2
 guid: 46c43d6ad34679c40be1d73fc8d99845
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
+    100000: Bolsa Dinero
+    100002: Bolsa Dinero001
+    100004: Bolsa Dinero002
+    100006: Bolsa Dinero003
+    100008: Bolsa Dinero004
+    100010: Bolsa Dinero005
+    100012: Bolsa Dinero006
+    100014: //RootNode
+    400000: Bolsa Dinero
+    400002: Bolsa Dinero001
+    400004: Bolsa Dinero002
+    400006: Bolsa Dinero003
+    400008: Bolsa Dinero004
+    400010: Bolsa Dinero005
+    400012: Bolsa Dinero006
+    400014: //RootNode
+    2300000: Bolsa Dinero
+    2300002: Bolsa Dinero001
+    2300004: Bolsa Dinero002
+    2300006: Bolsa Dinero003
+    2300008: Bolsa Dinero004
+    2300010: Bolsa Dinero005
+    2300012: Bolsa Dinero006
+    3300000: Bolsa Dinero
+    3300002: Bolsa Dinero001
+    3300004: Bolsa Dinero002
+    3300006: Bolsa Dinero003
+    3300008: Bolsa Dinero004
+    3300010: Bolsa Dinero005
+    3300012: Bolsa Dinero006
     4300000: Bolsa Dinero
     4300002: Bolsa Dinero001
     4300004: Bolsa Dinero002
@@ -10,7 +40,23 @@ ModelImporter:
     4300008: Bolsa Dinero004
     4300010: Bolsa Dinero005
     4300012: Bolsa Dinero006
-  externalObjects: {}
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default
+    second: {fileID: 2100000, guid: 5b6f2f1cfc743ba49a1573794db6ad4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: 5a3d12f3554e9ab448e68feb0872f42b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: b4b0491ee5f976d4f9b1cdc5786d28c8, type: 2}
   materials:
     importMaterials: 1
     materialName: 3
@@ -29,6 +75,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -43,6 +90,7 @@ ModelImporter:
     globalScale: 0.01
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -60,11 +108,16 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
     normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -79,7 +132,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

@@ -20,7 +20,7 @@ public class Bolsa : MonoBehaviour
 		
 		
 		if(Particulas != null)
-			Particulas.SetActiveRecursively(false);
+			Particulas.SetActive(false);
 			
 	}
 	
@@ -36,8 +36,8 @@ public class Bolsa : MonoBehaviour
 				GetComponent<Renderer>().enabled = true;
 				GetComponent<Collider>().enabled = true;
 				
-				Particulas.GetComponent<ParticleEmitter>().enabled = false;
-				gameObject.SetActiveRecursively(false);
+				Particulas.GetComponent<ParticleSystem>().Stop();
+				gameObject.SetActive(false);
 			}
 		}
 		
@@ -58,7 +58,7 @@ public class Bolsa : MonoBehaviour
 	
 	public void Desaparecer()
 	{
-		Particulas.GetComponent<ParticleEmitter>().Emit();
+		Particulas.GetComponent<ParticleSystem>().Play();
 		Desapareciendo = true;
 		
 		GetComponent<Renderer>().enabled = false;
@@ -66,7 +66,7 @@ public class Bolsa : MonoBehaviour
 		
 		if(Particulas != null)
 		{
-			Particulas.GetComponent<ParticleEmitter>().enabled = true;
+			Particulas.GetComponent<ParticleSystem>().Play();
 		}
 	
 	}
