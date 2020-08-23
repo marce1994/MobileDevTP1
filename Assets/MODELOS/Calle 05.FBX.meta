@@ -1,0 +1,209 @@
+fileFormatVersion: 2
+guid: 3edc3efda71213a40a9f32b767dc6ab5
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    4300000: Plane001
+    4300002: ChamferBox001
+    4300004: ChamferBox002
+    4300006: Cylinder001
+    4300008: Box001
+    4300010: Box002
+    4300012: Sem__foro
+    4300014: Covertura luces sem__foro
+    4300016: Contorno Sem__foro
+    4300018: Luz Roja
+    4300020: Luz Amarilla001
+    4300022: Luz Verde001
+    4300024: Cylinder002
+    4300026: Luz Amarilla002
+    4300028: Covertura luces sem__foro001
+    4300030: Luz Roja001
+    4300032: Luz Verde002
+    4300034: Sem__foro001
+    4300036: Sem__foro002
+    4300038: Luz Roja002
+    4300040: Covertura luces sem__foro002
+    4300042: Luz Amarilla003
+    4300044: Luz Verde003
+    4300046: Box003
+    4300048: Box004
+    4300050: Box005
+    4300052: Box006
+    4300054: Box007
+    4300056: Box008
+    4300058: Box009
+    4300060: Box010
+    4300062: ChamferBox003
+    4300064: Object012
+    4300066: Object013
+    4300068: Box011
+    4300070: Box012
+    4300072: Box013
+    4300074: Box014
+    4300076: Box015
+    4300078: Box016
+    4300080: Box017
+    4300082: Box018
+    4300084: Box019
+    4300086: Box020
+    4300088: ChamferBox004
+    4300090: ChamferBox005
+    4300092: cone
+    4300094: Circle002
+    4300096: Shape002
+    4300098: Blue Window
+    4300100: Blue Window001
+    4300102: Blue Window002
+    4300104: Blue Window003
+    4300106: Blue Window004
+    4300108: Blue Window005
+    4300110: Blue Window006
+    4300112: Blue Window007
+    4300114: Blue Window008
+    4300116: Blue Window009
+    4300118: Blue Window010
+    4300120: Blue Window011
+    4300122: Rectangle001
+    4300124: Rectangle002
+    4300126: Rectangle003
+    4300128: Shape006
+    4300130: Box026
+    4300132: Shape007
+    4300134: Shape008
+    4300136: Box027
+    4300138: Box028
+    4300140: Box029
+    4300142: Object035
+    4300144: Object036
+    4300146: Object037
+    4300148: Object038
+    4300150: Object039
+    4300152: Object040
+    4300154: Object041
+    4300156: Rectangle004
+    4300158: Box030
+    4300160: Object042
+    4300162: Object043
+    4300164: Object044
+    4300166: Object045
+    4300168: Object046
+    4300170: Object047
+    4300172: Object048
+    4300174: Object049
+    4300176: Object050
+    4300178: Object051
+    4300180: Box031
+    4300182: Object052
+    4300184: Object053
+    4300186: Object054
+    4300188: Object055
+    4300190: Object056
+    4300192: Box032
+    4300194: Rectangle005
+    4300196: Star001
+    4300198: Star002
+    4300200: Star003
+    4300202: Object057
+    4300204: Object058
+    4300206: Object059
+    4300208: cone001
+    4300210: cone002
+    4300212: Cylinder003
+    4300214: Sem__foro003
+    4300216: Covertura luces sem__foro003
+    4300218: Contorno Sem__foro001
+    4300220: Luz Roja003
+    4300222: Luz Amarilla004
+    4300224: Luz Verde004
+    4300226: Sem__foro004
+    4300228: Luz Amarilla005
+    4300230: Covertura luces sem__foro004
+    4300232: Luz Roja004
+    4300234: Luz Verde005
+    4300236: Sem__foro005
+    4300238: Luz Roja005
+    4300240: Covertura luces sem__foro005
+    4300242: Luz Amarilla006
+    4300244: Luz Verde006
+    4300246: Cylinder004
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

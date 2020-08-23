@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: 5f456f2c6bd920b40868b42bb64400a2
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    4300000: Wheel - Innertube
+    4300002: Wheel - Buyer
+    4300004: Wheel - Front piece
+    4300006: Wheel - Front piece
+    4300008: Wheel - Buyer
+    4300010: Wheel - Innertube
+    4300012: Object010
+    4300014: Object006
+    4300016: Object008
+    4300018: Object
+    4300020: Object002
+    4300022: Object004
+    4300024: Truck
+    4300026: Middle Right Door
+    4300028: 124
+    4300030: Middle Left Door - Glass
+    4300032: Truck - Front Glass
+    4300034: Middle Door Right
+    4300036: 123456
+    4300038: Box032
+    4300040: Cone001
+    4300042: Middle Right Door - Glass
+    4300044: ChamferBox022
+    4300046: ChamferBox023
+    4300048: ChamferBox024
+    4300050: ChamferBox025
+    4300052: ChamferBox026
+    4300054: ChamferBox027
+    4300056: ChamferBox028
+    4300058: Front Left Door
+    4300060: Box026
+    4300062: Front Left Door - Glass
+    4300064: Object035
+    4300066: Box033
+    4300068: Box027
+    4300070: Espejos
+    4300072: Base
+    4300074: Metal Delantero
+    4300076: Sphere008
+    4300078: Torus001
+    4300080: ChamferBox010
+    4300082: ChamferBox008
+    4300084: ChamferBox009
+    4300086: Cylinder003
+    4300088: Cylinder004
+    4300090: Object018
+    4300092: Front Right Door
+    4300094: Box031
+    4300096: Box030
+    4300098: Front Right Door - Glass
+    4300100: Sphere004
+    4300102: Sphere005
+    4300104: Object016
+    4300106: Object017
+    4300108: Box021
+    4300110: Parte de atras
+    4300112: Metal trasero
+    4300114: Lueces arriba
+    4300116: lUCESITAS
+    4300118: Inside Glass
+    4300120: Safe Box
+    4300122: Puerta Caja Seguridad 02
+    4300124: Manija 02
+    4300126: Perilla 02
+    4300128: Puerta Caja Seguridad 01
+    4300130: Manija 01
+    4300132: Perilla 01
+    4300134: Puerta Caja Seguridad 03
+    4300136: Manija 03
+    4300138: Perilla 03
+    4300140: Puerta Caja Seguridad 04
+    4300142: Perilla 04
+    4300144: Manija 04
+    4300146: Safe Box001
+    4300148: Puerta Caja Seguridad 005
+    4300150: Perilla 008
+    4300152: Manija 008
+    4300154: Puerta Caja Seguridad 006
+    4300156: Perilla 007
+    4300158: Manija 007
+    4300160: Puerta Caja Seguridad 007
+    4300162: Perilla 006
+    4300164: Manija 006
+    4300166: Puerta Caja Seguridad 008
+    4300168: Perilla 005
+    4300170: Manija 005
+    4300172: Estructuras Internas
+    4300174: Luces delanteras
+    4300176: Middle Door Right001
+    4300178: Middle Right Door001
+    4300180: Object036
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

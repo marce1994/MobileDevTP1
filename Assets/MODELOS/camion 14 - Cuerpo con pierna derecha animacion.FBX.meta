@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: e3656a2a7f22b9c478a74e792b33ed74
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    4300000: Front Right Door - Glass
+    4300002: Middle Left Door - Glass
+    4300004: Inside Glass
+    4300006: Torus001
+    4300008: Middle Right Door - Glass
+    4300010: Object010
+    4300012: Object006
+    4300014: Object008
+    4300016: Object
+    4300018: Object002
+    4300020: Object004
+    4300022: Safe Box
+    4300024: Plane001
+    4300026: Truck
+    4300028: Front Right Door
+    4300030: Front Left Door - Glass
+    4300032: Middle Right Door
+    4300034: Truck - Front Glass
+    4300036: ChamferBox010
+    4300038: ChamferBox008
+    4300040: ChamferBox009
+    4300042: Middle Door Right
+    4300044: ChamferBox022
+    4300046: ChamferBox023
+    4300048: ChamferBox024
+    4300050: ChamferBox025
+    4300052: ChamferBox026
+    4300054: ChamferBox027
+    4300056: ChamferBox028
+    4300058: ChamferBox001
+    4300060: ChamferBox002
+    4300062: Cylinder001
+    4300064: Box001
+    4300066: Box002
+    4300068: Sem__foro
+    4300070: Covertura luces sem__foro
+    4300072: Contorno Sem__foro
+    4300074: Luz Roja
+    4300076: Luz Amarilla001
+    4300078: Luz Verde001
+    4300080: Cylinder002
+    4300082: Luz Amarilla002
+    4300084: Covertura luces sem__foro001
+    4300086: Luz Roja001
+    4300088: Luz Verde002
+    4300090: Sem__foro001
+    4300092: Sem__foro002
+    4300094: Luz Roja002
+    4300096: Covertura luces sem__foro002
+    4300098: Luz Amarilla003
+    4300100: Luz Verde003
+    4300102: Box003
+    4300104: Box004
+    4300106: Box005
+    4300108: Box006
+    4300110: Box007
+    4300112: Box008
+    4300114: Box009
+    4300116: Box010
+    4300118: ChamferBox003
+    4300120: Object012
+    4300122: Object013
+    4300124: Box011
+    4300126: Box012
+    4300128: Box013
+    4300130: Box014
+    4300132: Box015
+    4300134: Box016
+    4300136: Box017
+    4300138: Box018
+    4300140: Box019
+    4300142: Box020
+    4300144: ChamferBox004
+    4300146: ChamferBox005
+    4300148: cone
+    4300150: Plane002
+    4300152: Box021
+    4300154: Parte de atras
+    4300156: Box022
+    4300158: Object016
+    4300160: Object017
+    4300162: Tube001
+    4300164: Sphere001
+    4300166: Sphere002
+    4300168: Box026
+    4300170: Box027
+    4300172: Box030
+    4300174: Back Door
+    4300176: Back Door - Glass
+    4300178: Object015
+    4300180: Box023
+    4300182: Metal trasero
+    4300184: Front Left Door
+    4300186: Metal Delantero
+    4300188: Base
+    4300190: Cylinder003
+    4300192: Cylinder004
+    4300194: Sphere004
+    4300196: Sphere005
+    4300198: Espejos
+    4300200: Sphere008
+    4300202: Box031
+    4300204: 124
+    4300206: 123456
+    4300208: Cone001
+    4300210: Box032
+    4300212: Lueces arriba
+    4300214: lUCESITAS
+    4300216: Cylinder005
+    4300218: Box033
+    4300220: Object018
+    4300222: Cabeza01
+    4300224: Cabeza02
+    4300226: Cabeza03
+    4300228: Wheel - Innertube
+    4300230: Wheel - Buyer
+    4300232: Wheel - Front piece
+    4300234: Wheel - Front piece
+    4300236: Wheel - Buyer
+    4300238: Wheel - Innertube
+    4300240: Circle004
+    4300242: H010
+    4300244: H009
+    4300246: H008
+    4300248: H007
+    4300250: Hhbd003
+    4300252: Hhbd002
+    4300254: PuntoIK008
+    4300256: PuntoIK007
+    4300258: PuntoIK009
+    4300260: H011
+    4300262: Object035
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

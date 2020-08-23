@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: 0ac3464ae5d3b4445b6a8c68a0da9197
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    4300000: Line006
+    4300002: Plane002
+    4300004: Box035
+    4300006: Object036
+    4300008: Box036
+    4300010: Door
+    4300012: Cylinder005
+    4300014: Cylinder006
+    4300016: Cylinder007
+    4300018: Box256
+    4300020: Box257
+    4300022: Object354
+    4300024: Object353
+    4300026: Object352
+    4300028: Object351
+    4300030: Object350
+    4300032: Object349
+    4300034: Wheel - Innertube002
+    4300036: Wheel - Buyer002
+    4300038: Wheel - Front piece002
+    4300040: Wheel - Front piece001
+    4300042: Wheel - Buyer001
+    4300044: Wheel - Innertube001
+    4300046: Truck001
+    4300048: Truck - Front Glass001
+    4300050: Middle Right Door001
+    4300052: 123457
+    4300054: Middle Left Door - Glass001
+    4300056: Middle Door Right001
+    4300058: 123458
+    4300060: Box258
+    4300062: Cone002
+    4300064: Middle Right Door - Glass001
+    4300066: ChamferBox029
+    4300068: ChamferBox030
+    4300070: ChamferBox031
+    4300072: ChamferBox032
+    4300074: ChamferBox033
+    4300076: ChamferBox034
+    4300078: ChamferBox035
+    4300080: Front Left Door001
+    4300082: Box259
+    4300084: Front Left Door - Glass001
+    4300086: Object345
+    4300088: Box260
+    4300090: Box261
+    4300092: Espejos001
+    4300094: Base001
+    4300096: Metal Delantero001
+    4300098: Sphere009
+    4300100: Torus002
+    4300102: ChamferBox036
+    4300104: ChamferBox037
+    4300106: ChamferBox038
+    4300108: Cylinder008
+    4300110: Cylinder009
+    4300112: Object346
+    4300114: Front Right Door001
+    4300116: Box262
+    4300118: Box263
+    4300120: Front Right Door - Glass001
+    4300122: Sphere010
+    4300124: Sphere011
+    4300126: Object347
+    4300128: Object348
+    4300130: Box264
+    4300132: Parte de atras001
+    4300134: Metal trasero001
+    4300136: Lueces arriba001
+    4300138: lUCESITAS001
+    4300140: Inside Glass001
+    4300142: Safe Box002
+    4300144: Puerta Caja Seguridad 009
+    4300146: Manija 009
+    4300148: Perilla 009
+    4300150: Puerta Caja Seguridad 010
+    4300152: Manija 010
+    4300154: Perilla 010
+    4300156: Puerta Caja Seguridad 011
+    4300158: Manija 011
+    4300160: Perilla 011
+    4300162: Puerta Caja Seguridad 012
+    4300164: Perilla 012
+    4300166: Manija 012
+    4300168: Safe Box003
+    4300170: Puerta Caja Seguridad 013
+    4300172: Perilla 013
+    4300174: Manija 013
+    4300176: Puerta Caja Seguridad 014
+    4300178: Perilla 014
+    4300180: Manija 014
+    4300182: Puerta Caja Seguridad 015
+    4300184: Perilla 015
+    4300186: Manija 015
+    4300188: Puerta Caja Seguridad 016
+    4300190: Perilla 016
+    4300192: Manija 016
+    4300194: Estructuras Internas001
+    4300196: Luces delanteras001
+    4300198: Line007
+    4300200: Plane003
+    4300202: Skin
+    4300204: Plane004
+    4300206: Line008
+    4300208: Object355
+    4300210: Box266
+    4300212: Line009
+    4300214: Line010
+    4300216: Box267
+    4300218: Box268
+    4300220: Truck002
+    4300222: Truck - Front Glass002
+    4300224: Middle Right Door002
+    4300226: 123459
+    4300228: Middle Left Door - Glass002
+    4300230: Middle Door Right002
+    4300232: 123460
+    4300234: Box269
+    4300236: Cone003
+    4300238: Middle Right Door - Glass002
+    4300240: ChamferBox039
+    4300242: ChamferBox040
+    4300244: ChamferBox041
+    4300246: ChamferBox042
+    4300248: ChamferBox043
+    4300250: ChamferBox044
+    4300252: ChamferBox045
+    4300254: Front Left Door002
+    4300256: Box270
+    4300258: Front Left Door - Glass002
+    4300260: Object356
+    4300262: Box271
+    4300264: Box272
+    4300266: Espejos002
+    4300268: Base002
+    4300270: Metal Delantero002
+    4300272: Sphere012
+    4300274: Torus003
+    4300276: ChamferBox046
+    4300278: ChamferBox047
+    4300280: ChamferBox048
+    4300282: Cylinder020
+    4300284: Cylinder021
+    4300286: Object357
+    4300288: Front Right Door002
+    4300290: Box273
+    4300292: Box274
+    4300294: Front Right Door - Glass002
+    4300296: Sphere013
+    4300298: Sphere014
+    4300300: Object358
+    4300302: Object359
+    4300304: Box275
+    4300306: Parte de atras002
+    4300308: Metal trasero002
+    4300310: Lueces arriba002
+    4300312: lUCESITAS002
+    4300314: Inside Glass002
+    4300316: Safe Box004
+    4300318: Puerta Caja Seguridad 017
+    4300320: Manija 017
+    4300322: Perilla 017
+    4300324: Puerta Caja Seguridad 018
+    4300326: Manija 018
+    4300328: Perilla 018
+    4300330: Puerta Caja Seguridad 019
+    4300332: Manija 019
+    4300334: Perilla 019
+    4300336: Puerta Caja Seguridad 020
+    4300338: Perilla 020
+    4300340: Manija 020
+    4300342: Safe Box005
+    4300344: Puerta Caja Seguridad 021
+    4300346: Perilla 021
+    4300348: Manija 021
+    4300350: Puerta Caja Seguridad 022
+    4300352: Perilla 022
+    4300354: Manija 022
+    4300356: Puerta Caja Seguridad 023
+    4300358: Perilla 023
+    4300360: Manija 023
+    4300362: Puerta Caja Seguridad 024
+    4300364: Perilla 024
+    4300366: Manija 024
+    4300368: Estructuras Internas002
+    4300370: Luces delanteras002
+    4300372: Wheel - Innertube003
+    4300374: Wheel - Buyer003
+    4300376: Wheel - Front piece003
+    4300378: Wheel - Front piece004
+    4300380: Wheel - Buyer004
+    4300382: Wheel - Innertube004
+    4300384: Object360
+    4300386: Object361
+    4300388: Object362
+    4300390: Object363
+    4300392: Object364
+    4300394: Object365
+    4300396: Cylinder011
+    4300398: Cylinder010
+    4300400: Cylinder012
+    4300402: Tube001
+    4300404: Cylinder013
+    4300406: Cylinder014
+    4300408: Cylinder015
+    4300410: Cylinder016
+    4300412: Cylinder017
+    4300414: Cylinder018
+    4300416: Cylinder019
+    4300418: Cylinder022
+    4300420: Cylinder023
+    4300422: Cylinder024
+    4300424: Tube002
+    4300426: Cylinder025
+    4300428: Cylinder026
+    4300430: Cylinder027
+    4300432: Cylinder028
+    4300434: Cylinder029
+    4300436: Cylinder030
+    4300438: Cylinder031
+    4300440: Plane005
+    4300442: Plane006
+    4300444: Plane007
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Entrada
+      takeName: 
+      firstFrame: 75
+      lastFrame: 150
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Salida
+      takeName: 
+      firstFrame: 180
+      lastFrame: 260
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

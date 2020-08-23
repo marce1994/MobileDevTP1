@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: 00f50aafe6a832a41bfb38b104747501
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    4300000: Truck
+    4300002: Truck - Front Glass
+    4300004: Front Right Door - Glass
+    4300006: Front Right Door
+    4300008: Middle Left Door - Glass
+    4300010: Middle Right Door
+    4300012: Inside Glass
+    4300014: Front Left Door - Glass
+    4300016: Torus001
+    4300018: Middle Right Door - Glass
+    4300020: Back Door
+    4300022: Back Door - Glass
+    4300024: Object010
+    4300026: Object006
+    4300028: Object008
+    4300030: Wheel - Innertube
+    4300032: Wheel - Buyer
+    4300034: Wheel - Front piece
+    4300036: Wheel - Front piece
+    4300038: Wheel - Buyer
+    4300040: Wheel - Innertube
+    4300042: Object
+    4300044: Object002
+    4300046: Object004
+    4300048: Safe Box
+    4300050: Plane001
+    4300052: ChamferBox001
+    4300054: ChamferBox002
+    4300056: Cylinder001
+    4300058: Box001
+    4300060: Box002
+    4300062: Sem__foro
+    4300064: Covertura luces sem__foro
+    4300066: Contorno Sem__foro
+    4300068: Luz Roja
+    4300070: Luz Amarilla001
+    4300072: Luz Verde001
+    4300074: Cylinder002
+    4300076: Luz Amarilla002
+    4300078: Covertura luces sem__foro001
+    4300080: Luz Roja001
+    4300082: Luz Verde002
+    4300084: Sem__foro001
+    4300086: Sem__foro002
+    4300088: Luz Roja002
+    4300090: Covertura luces sem__foro002
+    4300092: Luz Amarilla003
+    4300094: Luz Verde003
+    4300096: Box003
+    4300098: Box004
+    4300100: Box005
+    4300102: Box006
+    4300104: Box007
+    4300106: Box008
+    4300108: Box009
+    4300110: Box010
+    4300112: ChamferBox003
+    4300114: Object012
+    4300116: Object013
+    4300118: Box011
+    4300120: Box012
+    4300122: Box013
+    4300124: Box014
+    4300126: Box015
+    4300128: Box016
+    4300130: Box017
+    4300132: Box018
+    4300134: Box019
+    4300136: Box020
+    4300138: ChamferBox004
+    4300140: ChamferBox005
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
