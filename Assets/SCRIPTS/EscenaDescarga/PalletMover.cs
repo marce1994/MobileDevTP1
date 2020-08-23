@@ -11,6 +11,7 @@ public class PalletMover : ManejoPallets {
     }
 
     public ManejoPallets Desde, Hasta;
+    bool segundoCompleto = false;
 
     private void Update() {
         switch (miInput) {
@@ -21,7 +22,7 @@ public class PalletMover : ManejoPallets {
                 if (Tenencia() && Input.GetKeyDown(KeyCode.S)) {
                     SegundoPaso();
                 }
-                if (Tenencia() && !Hasta.Tenencia() && Input.GetKeyDown(KeyCode.D)) {
+                if (segundoCompleto && Tenencia() && Input.GetKeyDown(KeyCode.D)) {
                     TercerPaso();
                 }
                 break;
@@ -32,7 +33,7 @@ public class PalletMover : ManejoPallets {
                 if (Tenencia() && Input.GetKeyDown(KeyCode.DownArrow)) {
                     SegundoPaso();
                 }
-                if (Tenencia() && !Hasta.Tenencia() && Input.GetKeyDown(KeyCode.RightArrow)) {
+                if (segundoCompleto && Tenencia() && Input.GetKeyDown(KeyCode.RightArrow)) {
                     TercerPaso();
                 }
                 break;
@@ -43,12 +44,15 @@ public class PalletMover : ManejoPallets {
 
     void PrimerPaso() {
         Desde.Dar(this);
+        segundoCompleto = false;
     }
     void SegundoPaso() {
         base.Pallets[0].transform.position = transform.position;
+        segundoCompleto = true;
     }
     void TercerPaso() {
         Dar(Hasta);
+        segundoCompleto = false;
     }
 
     public override void Dar(ManejoPallets receptor) {
