@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class PantallaCalibTuto : MonoBehaviour 
 {
@@ -16,12 +15,6 @@ public class PantallaCalibTuto : MonoBehaviour
 	
 	public ContrCalibracion ContrCalib;
 
-	// Use this for initialization
-	void Start () 
-	{
-	
-	}
-	
 	// Update is called once per frame
 	void Update () 
 	{
@@ -43,7 +36,6 @@ public class PantallaCalibTuto : MonoBehaviour
 			break;
 			
 		case ContrCalibracion.Estados.Tutorial:
-			//tome la bolsa y depositela en el estante
 			TempoIntTuto += T.GetDT();
 			if(TempoIntTuto >= Intervalo)
 			{
@@ -58,7 +50,6 @@ public class PantallaCalibTuto : MonoBehaviour
 			break;
 			
 		case ContrCalibracion.Estados.Finalizado:
-			//esperando al otro jugador		
 			GetComponent<Renderer>().material.mainTexture = ImaReady;
 			
 			break;

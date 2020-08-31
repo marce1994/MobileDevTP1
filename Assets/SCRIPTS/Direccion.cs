@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class Direccion : MonoBehaviour 
 {
@@ -10,7 +9,7 @@ public class Direccion : MonoBehaviour
 	public float DifMax = 0;
 	public float Sensibilidad = 1;
 	
-	public Transform Camion;//lo que va a conducir
+	public Transform Camion;
 	public Transform Volante;
 	
 	
@@ -18,16 +17,7 @@ public class Direccion : MonoBehaviour
 	Sentido DirAct;
 	float Diferencia;
 	Vector3 Aux;
-		
-	//---------------------------------------------------------//
 	
-	// Use this for initialization
-	void Start () 
-	{
-	
-	}
-	
-	// Update is called once per frame
 	void Update () 
 	{
 		if(ManoIzq.position.y > ManoDer.position.y)
@@ -48,17 +38,11 @@ public class Direccion : MonoBehaviour
 			case Sentido.Der:
 				Camion.rotation *= Quaternion.AngleAxis(Diferencia * Sensibilidad * Time.deltaTime, Camion.up);
 				Volante.localRotation *= Quaternion.AngleAxis(Diferencia * Sensibilidad * Time.deltaTime, Vector3.up);
-				//Aux = Volante.localEulerAngles;
-				//Aux.x += Diferencia * Sensibilidad;
-				//Volante.localEulerAngles = Aux;
 				break;
 				
 			case Sentido.Izq:
 				Camion.rotation *= Quaternion.AngleAxis((-1) * Diferencia * Sensibilidad * Time.deltaTime, Camion.up);
 				Volante.localRotation *= Quaternion.AngleAxis((-1) * Diferencia * Sensibilidad * Time.deltaTime, Vector3.up);
-				//Aux = Volante.localEulerAngles;
-				//Aux.x -= Diferencia * Sensibilidad;
-				//Volante.localEulerAngles = Aux;
 				break;
 			}
 			

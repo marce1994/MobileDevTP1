@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class VeredaRespawn : MonoBehaviour 
 {
@@ -10,13 +9,7 @@ public class VeredaRespawn : MonoBehaviour
 	{
 		GetComponent<Renderer>().enabled = false;
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
-	}
-	
+
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.tag == PlayerTag)

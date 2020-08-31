@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PalletMover : ManejoPallets {
+﻿public class PalletMover : ManejoPallets {
 
     public MoveType miInput;
     public enum MoveType {
@@ -16,24 +12,24 @@ public class PalletMover : ManejoPallets {
     private void Update() {
         switch (miInput) {
             case MoveType.WASD:
-                if (!Tenencia() && Desde.Tenencia() && Input.GetKeyDown(KeyCode.A)) {
+                if (!Tenencia() && Desde.Tenencia() && InputManager.Instance.GetAxis("Horizontal1") < -0.75f) {
                     PrimerPaso();
                 }
-                if (Tenencia() && Input.GetKeyDown(KeyCode.S)) {
+                if (Tenencia() && InputManager.Instance.GetAxis("Horizontal1") > 0) {
                     SegundoPaso();
                 }
-                if (segundoCompleto && Tenencia() && Input.GetKeyDown(KeyCode.D)) {
+                if (segundoCompleto && Tenencia() && InputManager.Instance.GetAxis("Horizontal1") > 0.75f) {
                     TercerPaso();
                 }
                 break;
             case MoveType.Arrows:
-                if (!Tenencia() && Desde.Tenencia() && Input.GetKeyDown(KeyCode.LeftArrow)) {
+                if (!Tenencia() && Desde.Tenencia() && InputManager.Instance.GetAxis("Horizontal2") < -0.75f) {
                     PrimerPaso();
                 }
-                if (Tenencia() && Input.GetKeyDown(KeyCode.DownArrow)) {
+                if (Tenencia() && InputManager.Instance.GetAxis("Horizontal2") > 0) {
                     SegundoPaso();
                 }
-                if (segundoCompleto && Tenencia() && Input.GetKeyDown(KeyCode.RightArrow)) {
+                if (segundoCompleto && Tenencia() && InputManager.Instance.GetAxis("Horizontal2") > 0.75f) {
                     TercerPaso();
                 }
                 break;

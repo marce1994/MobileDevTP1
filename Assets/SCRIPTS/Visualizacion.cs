@@ -1,11 +1,5 @@
 using UnityEngine;
-using System.Collections;
 
-/// <summary>
-/// clase encargada de TODA la visualizacion
-/// de cada player, todo aquello que corresconda a 
-/// cada seccion de la pantalla independientemente
-/// </summary>
 public class Visualizacion : MonoBehaviour 
 {
 	public enum Lado{Izq, Der}
@@ -36,13 +30,6 @@ public class Visualizacion : MonoBehaviour
 	//PARA EL INVENTARIO
 	public Vector2[] FondoPos;
 	public Vector2 FondoEsc = Vector2.zero;
-	
-	//public Vector2 SlotsEsc = Vector2.zero;
-	//public Vector2 SlotPrimPos = Vector2.zero;
-	//public Vector2 Separacion = Vector2.zero;
-	
-	//public int Fil = 0;
-	//public int Col = 0;
 	
 	public Texture2D TexturaVacia;//lo que aparece si no hay ninguna bolsa
 	public Texture2D TextFondo;
@@ -87,73 +74,43 @@ public class Visualizacion : MonoBehaviour
 	public Texture2D TextNum1; 
 	public Texture2D TextNum2;
 	public GameObject Techo;
-	
-	
-	
-	
+
 	Rect R;
-	
-	//------------------------------------------------------------------//
-	
+
 	// Use this for initialization
 	void Start () 
 	{
+		R = new Rect();
 		TempoIntTuto = Intervalo;
 		Direccion = GetComponent<ControlDireccion>();
 		Pj = GetComponent<Player>();
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
-	
-	void OnGUI()
-	{	
-		switch(Pj.EstAct)
-		{
-			
-			
-		case Player.Estados.EnConduccion:
-			//inventario
-			SetInv3();
-			//contador de dinero
-			SetDinero();
-			//el volante
-			SetVolante();
-			break;
-			
-			
-			
-		case Player.Estados.EnDescarga:
-			//inventario
-			SetInv3();
-			//el bonus
-			SetBonus();
-			//contador de dinero
-			SetDinero();			
-			break;
-			
-			
-		case Player.Estados.EnCalibracion:
-			//SetCalibr();
-			break;
-			
-			
-		case Player.Estados.EnTutorial:
-			SetInv3();
-			SetTuto();
-			SetVolante();
-			break;
-		}
-		
-		GUI.skin = null;
-	}
-	
-	//--------------------------------------------------------//
-	
-	public void CambiarACalibracion()
+
+    void OnGUI()
+    {
+        switch (Pj.EstAct)
+        {
+
+
+            case Player.Estados.EnConduccion:
+                SetInv3();
+                SetDinero();
+                break;
+            case Player.Estados.EnDescarga:
+                SetInv3();
+                SetDinero();
+                break;
+            case Player.Estados.EnTutorial:
+                SetInv3();
+                SetTuto();
+                SetVolante();
+                break;
+        }
+
+        GUI.skin = null;
+    }
+
+    public void CambiarACalibracion()
 	{
 		CamCalibracion.enabled = true;
 		CamConduccion.enabled = false;
@@ -180,9 +137,7 @@ public class Visualizacion : MonoBehaviour
 		CamConduccion.enabled = false;
 		CamDescarga.enabled = true;
 	}
-	
-	//---------//
-	
+		
 	public void SetLado(Lado lado)
 	{
 		LadoAct = lado;
@@ -269,7 +224,6 @@ public class Visualizacion : MonoBehaviour
 		R.y = DinPos[0].y *Screen.height /100;
 		if(LadoAct == Visualizacion.Lado.Der)
 			R.x = DinPos[1].x *Screen.width /100;
-			//R.x = (Screen.width) - (Screen.width/2) - R.x;
 		GUI.Box(R, "$" + PrepararNumeros(Pj.Dinero));
 	}
 	
@@ -338,53 +292,6 @@ public class Visualizacion : MonoBehaviour
 		}
 	}
 	
-	/*
-	void SetInv()
-	{
-		GUI.skin = GS_Inv;
-		
-		//fondo
-		GS_Inv.box.normal.background = TextFondo;
-		R.width = FondoEsc.x * Screen.width /100;
-		R.height = FondoEsc.y * Screen.height /100;
-		R.x = FondoPos.x * Screen.width /100;
-		R.y = FondoPos.y * Screen.height /100;
-		if(LadoAct == Visualizacion.Lado.Der)
-			R.x = (Screen.width) - R.x - R.width;
-		GUI.Box(R,"");
-		
-		//bolsas
-		R.width = SlotsEsc.x * Screen.width /100;
-		R.height = SlotsEsc.y * Screen.height /100;
-		int contador = 0;
-		for(int j = 0; j < Fil; j++)
-		{
-			for(int i = 0; i < Col; i++)
-			{
-				R.x = SlotPrimPos.x * Screen.width / 100 + Separacion.x * i * Screen.width / 100;
-				R.y = SlotPrimPos.y * Screen.height / 100 + Separacion.y * j * Screen.height / 100;
-				if(LadoAct == Visualizacion.Lado.Der)
-					R.x = (Screen.width) - R.x - R.width;
-				
-				if(contador < Pj.Bolasas.Length )//&& Pj.Bolasas[contador] != null)
-				{
-					if(Pj.Bolasas[contador]!=null)
-						GS_Inv.box.normal.background = Pj.Bolasas[contador].ImagenInventario;
-					else
-						GS_Inv.box.normal.background = TexturaVacia;				
-				}
-				else
-				{
-					GS_Inv.box.normal.background = TexturaVacia;
-				}
-				GUI.Box(R,"");
-				
-				contador++;
-			}
-		}
-	}
-	*/
-	
 	void SetVolante()
 	{
 		GUI.skin = GS_Volante;
@@ -396,12 +303,11 @@ public class Visualizacion : MonoBehaviour
 		
 		if(LadoAct == Visualizacion.Lado.Der)
 			R.x = VolantePos[1].x *Screen.width /100;
-			//R.x = (Screen.width) - ((Screen.width/2) - R.x);
 		
 		Vector2 centro;
 		centro.x = R.x + R.width/2;
 		centro.y = R.y + R.height/2;
-		float angulo = 100 * Direccion.GetGiro();
+		float angulo = 100;
 		
 		GUIUtility.RotateAroundPivot(angulo, centro);
 				
@@ -428,7 +334,6 @@ public class Visualizacion : MonoBehaviour
 		
 		if(LadoAct == Visualizacion.Lado.Der)
 		{
-			//R.x = (Screen.width) - R.x - R.width;
 			R.x = FondoPos[1].x * Screen.width /100;
 			GS_Inv.box.normal.background = TextInvDer[contador];
 		}
@@ -458,7 +363,6 @@ public class Visualizacion : MonoBehaviour
 		
 		if(LadoAct == Visualizacion.Lado.Der)
 		{
-			//R.x = (Screen.width) - (Screen.width/2) - R.x;
 			R.x = FondoPos[1].x * Screen.width /100;
 			
 			if(contador < 3)

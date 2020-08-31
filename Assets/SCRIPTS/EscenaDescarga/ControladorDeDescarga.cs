@@ -1,9 +1,9 @@
 using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class ControladorDeDescarga : MonoBehaviour 
 {
-	System.Collections.Generic.List<Pallet.Valores> Ps = new System.Collections.Generic.List<Pallet.Valores>();
+	List<Pallet.Valores> Ps = new List<Pallet.Valores>();
 	
 	int Contador = 0;
 	
@@ -35,13 +35,8 @@ public class ControladorDeDescarga : MonoBehaviour
 	public float Bonus = 0;
 	float TempoBonus;
 	
-	
 	public AnimMngDesc ObjAnimado;
 
-	
-	//--------------------------------------------------------------//
-
-	// Use this for initialization
 	void Start () 
 	{
 		for (int i = 0; i < Componentes.Length; i++)
@@ -74,9 +69,7 @@ public class ControladorDeDescarga : MonoBehaviour
 		
 		
 	}
-	
-	//--------------------------------------------------------------//
-			
+
 	public void Activar(Deposito2 d)
 	{
 		Dep = d;//recibe el deposito para que sepa cuando dejarlo ir al camion
@@ -137,9 +130,6 @@ public class ControladorDeDescarga : MonoBehaviour
 	//cuando llega a la cinta
 	public void LlegadaPallet(Pallet p)
 	{
-		//termina el contador y suma los pts
-		
-		//termina la descarga
 		PEnMov = null;
 		Contador--;
 		

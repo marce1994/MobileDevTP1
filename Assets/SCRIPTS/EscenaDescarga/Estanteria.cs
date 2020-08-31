@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class Estanteria : ManejoPallets
 {	
@@ -8,17 +7,13 @@ public class Estanteria : ManejoPallets
 	PilaPalletMng Contenido;
 	public bool Anim = false;
 	
-	
-	//animacion de parpadeo
 	public float Intervalo = 0.7f;
 	public float Permanencia = 0.2f;
 	float AnimTempo = 0;
 	public GameObject ModelSuelo;
 	public Color32 ColorParpadeo;
 	Color32 ColorOrigModel;
-	
-	//--------------------------------//	
-	
+		
 	void Start () 
 	{
 		Contenido = GetComponent<PilaPalletMng>();
@@ -58,23 +53,18 @@ public class Estanteria : ManejoPallets
 			Dar(recept);
 		}
 	}
-	
-	//------------------------------------------------------------//
-	
+
 	public override void Dar(ManejoPallets receptor)
 	{
         if (Tenencia()) {
             if (Controlador.GetPalletEnMov() == null) {
                 if (receptor.Recibir(Pallets[0])) {
-                    //enciende la cinta y el indicador
-                    //cambia la textura de cuantos pallet le queda
                     CintaReceptora.Encender();
                     Controlador.SalidaPallet(Pallets[0]);
                     Pallets[0].GetComponent<Renderer>().enabled = true;
                     Pallets.RemoveAt(0);
                     Contenido.Sacar();
                     ApagarAnim();
-                    //Debug.Log("pallet entregado a Mano de Estanteria");
                 }
             }
         }

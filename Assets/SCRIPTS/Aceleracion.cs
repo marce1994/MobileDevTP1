@@ -1,17 +1,16 @@
 using UnityEngine;
-using System.Collections;
 
 public class Aceleracion : MonoBehaviour 
 {
 	public Transform ManoDer;
 	public Transform ManoIzq;
 	
-	public float AlturaMedia = 0;//valor en eje Y que calibra el 0 de cada pedal
-	
+	public float AlturaMedia = 0;
+
 	public float SensAcel = 1;
 	public float SensFren = 1;
 	
-	public Transform Camion;//lo que va a conducir
+	public Transform Camion;
 	
 	//pedales
 	public Transform PedalAcel;
@@ -27,22 +26,16 @@ public class Aceleracion : MonoBehaviour
 	float Frenado;
 	float Acelerado;
 	
-	//---------------------------------------------------------//
-
-	// Use this for initialization
 	void Start () 
 	{
 		PAclPosIni = PedalAcel.localPosition;
 		PFrnPosIni = PedalFren.localPosition;
 	}
 	
-	// Update is called once per frame
 	void Update () 
 	{
 		DifDer = ManoDer.position.y - AlturaMedia;
 		DifIzq = ManoIzq.position.y - AlturaMedia;
-		
-		//acelerar
 		if(DifDer > 0)
 		{
 			Acelerado = DifDer * SensAcel * Time.deltaTime;
@@ -51,12 +44,6 @@ public class Aceleracion : MonoBehaviour
 			
 			PedalAcel.localPosition = PAclPosIni - PedalAcel.forward * SensivPed * Acelerado;
 		}
-		else
-		{
-			//PedalFren.localPosition = PAclPosIni;
-		}
-		
-		//frenar
 		if(DifIzq > 0)
 		{
 			Frenado = DifIzq * SensFren * Time.deltaTime;
@@ -64,10 +51,6 @@ public class Aceleracion : MonoBehaviour
 			Camion.position -= Frenado * Camion.forward;
 			
 			PedalFren.localPosition = PFrnPosIni - PedalFren.forward * SensivPed * Frenado;
-		}
-		else
-		{
-			//PedalFren.localPosition = PFrnPosIni;
 		}
 	}
 }

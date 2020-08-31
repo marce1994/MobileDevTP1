@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class Cinta : ManejoPallets 
 {
@@ -18,9 +17,7 @@ public class Cinta : ManejoPallets
 	public GameObject ModelCinta;
 	public Color32 ColorParpadeo;
 	Color32 ColorOrigModel;
-	
-	//------------------------------------------------------------//
-	
+		
 	void Start () 
 	{
 		ColorOrigModel = ModelCinta.GetComponent<Renderer>().material.color;
@@ -84,9 +81,6 @@ public class Cinta : ManejoPallets
 		}
 	}
 	
-	
-	//------------------------------------------------------------//
-
 	public override bool Recibir(Pallet p)
 	{
         Tempo = 0;

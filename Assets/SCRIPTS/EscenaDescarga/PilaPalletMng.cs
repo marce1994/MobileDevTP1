@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class PilaPalletMng : MonoBehaviour 
 {
@@ -14,13 +13,7 @@ public class PilaPalletMng : MonoBehaviour
 			BolasasEnCamion[i].GetComponent<Renderer>().enabled = false;
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
-	}
-	
+
 	public void Sacar()
 	{
 		BolasasEnCamion[CantAct-1].GetComponent<Renderer>().enabled = false;

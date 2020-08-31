@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class ManejoPallets : MonoBehaviour 
 {
@@ -22,17 +21,10 @@ public class ManejoPallets : MonoBehaviour
 			return true;
 		else
 			return false;
-		
-		/*
-		if(Pallets.Count > Contador)
-			return true;
-		else
-			return false;
-			*/
 	}
 	
 	public virtual void Dar(ManejoPallets receptor)
 	{
-		//es el encargado de decidir si le da o no la bolsa
+
 	}
 }

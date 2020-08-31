@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class CheakPoint : MonoBehaviour
 {
@@ -8,13 +7,11 @@ public class CheakPoint : MonoBehaviour
 	public float TiempPermanencia = 0.7f;//tiempo que no deja respaunear a un pj desp que el otro lo hizo.
 	float Tempo = 0;
 
-	// Use this for initialization
 	void Start ()
 	{
 		GetComponent<Renderer>().enabled = false;
 	}
 	
-	// Update is called once per frame
 	void Update () 
 	{
 		if(!HabilitadoResp)
@@ -43,9 +40,7 @@ public class CheakPoint : MonoBehaviour
 			HabilitadoResp = true;
 		}
 	}
-	
-	//---------------------------------------------------//
-	
+
 	public bool Habilitado()
 	{
 		if(HabilitadoResp)

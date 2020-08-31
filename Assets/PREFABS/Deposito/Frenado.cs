@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class Frenado : MonoBehaviour 
 {
@@ -20,22 +19,12 @@ public class Frenado : MonoBehaviour
 	
 	public bool Frenando = false;
 	bool ReduciendoVel = false;
-	
-	//-----------------------------------------------------//
-	
-	// Use this for initialization
+
 	void Start () 
 	{
-		//RestaurarVel();
 		Frenar();
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
-	}
-	
+
 	void FixedUpdate ()
 	{
 		if(Frenando)
@@ -44,11 +33,6 @@ public class Frenado : MonoBehaviour
 			if(Tempo >= (TiempFrenado / CantMensajes) * Contador)
 			{
 				Contador++;
-				//gameObject.SendMessage("SetDragZ", (float) (DagMax / CantMensajes) * Contador);
-			}
-			if(Tempo >= TiempFrenado)
-			{
-				//termino de frenar, que haga lo que quiera
 			}
 		}
 	}
@@ -70,31 +54,25 @@ public class Frenado : MonoBehaviour
 			}
 		}
 	}
-	
-	//-----------------------------------------------------------//
-	
+
 	public void Frenar()
 	{
-		//Debug.Log(gameObject.name + "frena");
 		GetComponent<ControlDireccion>().enabled = false;
 		gameObject.SendMessage("SetAcel", 0f);
 		GetComponent<Rigidbody>().velocity = Vector3.zero;
 		
 		Frenando = true;
 		
-		//gameObject.SendMessage("SetDragZ", 25f);
 		Tempo = 0;
 		Contador = 0;
 	}
 	
 	public void RestaurarVel()
 	{
-		//Debug.Log(gameObject.name + "restaura la velociad");
 		GetComponent<ControlDireccion>().enabled = true;
 		gameObject.SendMessage("SetAcel", 1f);
 		Frenando = false;
 		Tempo = 0;
 		Contador = 0;
-		//gameObject.SendMessage("SetDragZ", 1f);
 	}
 }

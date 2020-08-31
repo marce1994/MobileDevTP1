@@ -1,14 +1,13 @@
 using UnityEngine;
-using System.Collections;
 
 public class Respawn : MonoBehaviour 
 {
-	CheakPoint CPAct;
-	CheakPoint CPAnt;
+	CheakPoint CheckPointAct;
+	CheakPoint CechPointAnt;
 	
-	public float AngMax = 90;//angulo maximo antes del cual se reinicia el camion
+	public float MaxAngle = 90;//angulo maximo antes del cual se reinicia el camion
 	int VerifPorCuadro = 20;
-	int Contador = 0;
+	int Counter = 0;
 	
 	public float RangMinDer = 0;
 	public float RangMaxDer = 0;
@@ -16,32 +15,26 @@ public class Respawn : MonoBehaviour
 	bool IgnorandoColision = false;
 	public float TiempDeNoColision = 2;
 	float Tempo = 0;
-	
-	//--------------------------------------------------------//
 
-	// Use this for initialization
+	private new Rigidbody rigidbody;
+
 	void Start () 
 	{
-		/*
-		//a modo de prueba
-		TiempDeNoColision = 100;
-		IgnorarColision(true);
-		*/
-		
+		rigidbody = GetComponent<Rigidbody>();
+
 		//restaura las colisiones
 		Physics.IgnoreLayerCollision(8,9,false);
 	}
 	
-	// Update is called once per frame
 	void Update ()
 	{
-		if(CPAct != null)
+		if(CheckPointAct != null)
 		{
-			Contador++;
-			if(Contador == VerifPorCuadro)
+			Counter++;
+			if(Counter == VerifPorCuadro)
 			{
-				Contador = 0;
-				if(AngMax < Quaternion.Angle(transform.rotation, CPAct.transform.rotation))
+				Counter = 0;
+				if(MaxAngle < Quaternion.Angle(transform.rotation, CheckPointAct.transform.rotation))
 				{
 					Respawnear();
 				}
@@ -58,30 +51,28 @@ public class Respawn : MonoBehaviour
 		}
 		
 	}
-	
-	//--------------------------------------------------------//
-	
+
 	public void Respawnear()
 	{
-		GetComponent<Rigidbody>().velocity = Vector3.zero;
+		rigidbody.Sleep();
 		
 		gameObject.SendMessage("SetGiro", 0f);
 		
-		if(CPAct.Habilitado())
+		if(CheckPointAct != null && CheckPointAct.Habilitado())
 		{
 			if(GetComponent<Visualizacion>().LadoAct == Visualizacion.Lado.Der)
-				transform.position = CPAct.transform.position + CPAct.transform.right * Random.Range(RangMinDer, RangMaxDer);
+				transform.position = CheckPointAct.transform.position + CheckPointAct.transform.right * Random.Range(RangMinDer, RangMaxDer);
 			else 
-				transform.position = CPAct.transform.position + CPAct.transform.right * Random.Range(RangMinDer * (-1), RangMaxDer * (-1));
-			transform.forward = CPAct.transform.forward;
+				transform.position = CheckPointAct.transform.position + CheckPointAct.transform.right * Random.Range(RangMinDer * (-1), RangMaxDer * (-1));
+			transform.forward = CheckPointAct.transform.forward;
 		}
-		else if(CPAnt != null)
+		else if(CechPointAnt != null)
 		{
 			if(GetComponent<Visualizacion>().LadoAct == Visualizacion.Lado.Der)
-				transform.position = CPAnt.transform.position + CPAnt.transform.right * Random.Range(RangMinDer, RangMaxDer);
+				transform.position = CechPointAnt.transform.position + CechPointAnt.transform.right * Random.Range(RangMinDer, RangMaxDer);
 			else
-				transform.position = CPAnt.transform.position + CPAnt.transform.right * Random.Range(RangMinDer * (-1), RangMaxDer * (-1));
-			transform.forward = CPAnt.transform.forward;
+				transform.position = CechPointAnt.transform.position + CechPointAnt.transform.right * Random.Range(RangMinDer * (-1), RangMaxDer * (-1));
+			transform.forward = CechPointAnt.transform.forward;
 		}
 		
 		IgnorarColision(true);
@@ -94,6 +85,7 @@ public class Respawn : MonoBehaviour
 	{
 		GetComponent<Rigidbody>().velocity = Vector3.zero;
 		
+
 		gameObject.SendMessage("SetGiro", 0f);
 		
 		transform.position = pos;
@@ -115,26 +107,17 @@ public class Respawn : MonoBehaviour
 	
 	public void AgregarCP(CheakPoint cp)
 	{
-		if(cp != CPAct)
+		if(cp != CheckPointAct)
 		{
-			CPAnt = CPAct;
-			CPAct = cp;
+			CechPointAnt = CheckPointAct;
+			CheckPointAct = cp;
 		}
 	}
 	
 	void IgnorarColision(bool b)
 	{
-		//no contempla si los dos camiones respawnean relativamente cerca en el espacio 
-		//temporal y uno de ellos va contra el otro, 
-		//justo el segundo cancela las colisiones e inmediatamente el 1º las reactiva, 
-		//entonces colisionan, pero es dificil que suceda. 
-		
 		Physics.IgnoreLayerCollision(8,9,b);
 		IgnorandoColision = b;	
 		Tempo = 0;
 	}
-	
-	
-	
-	
 }

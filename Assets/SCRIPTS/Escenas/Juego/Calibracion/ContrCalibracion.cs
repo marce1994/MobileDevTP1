@@ -1,24 +1,11 @@
 using UnityEngine;
-using System.Collections;
 
 public class ContrCalibracion : MonoBehaviour
 {
 	public Player Pj;
-	/*
-	public string ManoIzqName = "Left Hand";
-	public string ManoDerName = "Right Hand";
-	
-	bool StayIzq = false;
-	bool StayDer = false;
-	*/
-	/*
-	public float TiempCalib = 3;
-	float Tempo = 0;
-	*/
+
 	public float TiempEspCalib = 3;
 	float Tempo2 = 0;
-	
-	//bool EnTutorial = false;
 	
 	public enum Estados{Calibrando, Tutorial, Finalizado}
 	public Estados EstAct = Estados.Calibrando;
@@ -29,16 +16,9 @@ public class ContrCalibracion : MonoBehaviour
     public ManejoPallets palletsMover;
 	
 	GameManager GM;
-	
-	//----------------------------------------------------//
-	
-	// Use this for initialization
+		
 	void Start () 
 	{
-        /*
-		renderer.enabled = false;
-		collider.enabled = false;
-		*/
         palletsMover.enabled = false;
         Pj.ContrCalib = this;
 		
@@ -64,76 +44,7 @@ public class ContrCalibracion : MonoBehaviour
 				}
 			}
 		}
-		
-		/*
-		if(Calibrado)
-		{
-			if(Tempo2 < TiempEspCalib)
-			{
-				Tempo2 += Time.deltaTime;
-				if(Tempo2 > TiempEspCalib)
-				{
-					PrenderVolante();
-				}
-			}
-			
-			if(VolanteEncendido)
-			{
-				if(StayIzq && StayDer)
-				{
-					if(Tempo < TiempCalib)
-					{
-						Tempo += Time.deltaTime;
-						if(Tempo > TiempCalib)
-						{
-							FinCalibracion();
-						}
-					}
-				}
-			}
-		}
-		*/
 	}
-	/*
-	void OnTriggerStay(Collider coll)
-	{
-		if(coll.name == ManoIzqName)
-			StayIzq = true;
-		else if(coll.name == ManoDerName)
-			StayDer = true;
-	}
-	
-	void OnTriggerExit(Collider coll)
-	{
-		if(coll.name == ManoIzqName || coll.name == ManoDerName)
-			Reiniciar();
-	}
-	*/
-	//----------------------------------------------------//
-	/*
-	void Reiniciar()
-	{
-		bool StayIzq = false;
-		bool StayDer = false;
-		Tempo = 0;
-	}
-	
-	void PrenderVolante()
-	{
-		VolanteEncendido = true;
-		renderer.enabled = true;
-		collider.enabled = true;
-	}
-	*/
-	
-	void FinCalibracion()
-	{
-		/*
-		Reiniciar();
-		GM.CambiarATutorial(Pj.IdPlayer);
-		*/
-	}
-	
 	public void IniciarTesteo()
 	{
 		EstAct = ContrCalibracion.Estados.Tutorial;

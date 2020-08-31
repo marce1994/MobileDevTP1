@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 public class FadeInicioFinal : MonoBehaviour 
 {
@@ -20,9 +20,9 @@ public class FadeInicioFinal : MonoBehaviour
 		Mng = (MngPts)GameObject.FindObjectOfType(typeof (MngPts));
 		TiempInicial = Mng.TiempEspReiniciar;
 		
-		aux = GetComponent<Renderer>().material.color;
+		aux = GetComponent<RawImage>().color;
 		aux.a = 0;
-		GetComponent<Renderer>().material.color = aux;
+		GetComponent<RawImage>().color = aux;
 	}
 	
 	// Update is called once per frame
@@ -31,15 +31,15 @@ public class FadeInicioFinal : MonoBehaviour
 		
 		if(Mng.TiempEspReiniciar > TiempInicial - Duracion)//aparicion
 		{
-			aux = GetComponent<Renderer>().material.color;
+			aux = GetComponent<RawImage>().color;
 			aux.a += Time.deltaTime / Duracion;
-			GetComponent<Renderer>().material.color = aux;			
+			GetComponent<RawImage>().color = aux;			
 		}
 		else if(Mng.TiempEspReiniciar < Duracion)//desaparicion
 		{
-			aux = GetComponent<Renderer>().material.color;
+			aux = GetComponent<RawImage>().color;
 			aux.a -= Time.deltaTime / Duracion;
-			GetComponent<Renderer>().material.color = aux;
+			GetComponent<RawImage>().color = aux;
 			
 			if(!MngAvisado)
 			{

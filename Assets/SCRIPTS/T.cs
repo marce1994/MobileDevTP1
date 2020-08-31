@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public static class T 
 {
@@ -40,8 +39,6 @@ public static class T
 		FactorFDT = 1;
 	}
 	
-	//----------
-	//delta time
 	public static float FactorDT = 1;
 	static bool FifadoDT = false;
 	public static void FijarDT(float valor)

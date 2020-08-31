@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class Pallet : MonoBehaviour 
 {
@@ -18,9 +17,7 @@ public class Pallet : MonoBehaviour
 	public float TiempSmoot = 0.3f;
 	float TempoSmoot = 0;
 	public bool EnSmoot = false;
-	
-	//----------------------------------------------//
-	
+		
 	void Start()
 	{
 		Pasaje();
@@ -63,14 +60,8 @@ public class Pallet : MonoBehaviour
 			
 	}
 	
-	//----------------------------------------------//
-	
 	public float GetBonus()
 	{
-		if(Tiempo > 0)
-		{
-			//calculo del bonus
-		}
 		return -1;
 	}
 	

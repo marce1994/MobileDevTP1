@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 /// <summary>
 /// basicamente lo que hace es que viaja en linea recta y ocacionalmente gira para un cosatado

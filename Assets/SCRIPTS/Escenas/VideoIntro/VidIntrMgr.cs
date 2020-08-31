@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class VidIntrMgr : MonoBehaviour 
 {
@@ -7,7 +7,7 @@ public class VidIntrMgr : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		Screen.lockCursor = true;
+		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 	}
 	
@@ -15,18 +15,15 @@ public class VidIntrMgr : MonoBehaviour
 	void Update () 
 	{
 		//PARA JUGAR
-		if(Input.GetKeyDown(KeyCode.KeypadEnter) || 
-		   Input.GetKeyDown(KeyCode.Return) ||
-		   Input.GetKeyDown(KeyCode.Mouse0))
+		if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Mouse0))
 		{
-			Application.LoadLevel(1);//el juego
+			SceneManager.LoadScene(1);//el juego
 		}
 		
 		//REINICIAR
-		if(Input.GetKeyDown(KeyCode.Mouse1) ||
-		   Input.GetKeyDown(KeyCode.Keypad0))
+		if(Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.Keypad0))
 		{
-			Application.LoadLevel(Application.loadedLevel);
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 		
 		//CIERRA LA APLICACION
@@ -38,7 +35,7 @@ public class VidIntrMgr : MonoBehaviour
 		//CALIBRACION DEL KINECT
 		if(Input.GetKeyDown(KeyCode.Backspace))
 		{
-			Application.LoadLevel(3);
+			SceneManager.LoadScene(3);
 		}
 	}
 }
