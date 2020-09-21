@@ -7,7 +7,7 @@ public class VirtualJoystic : MonoBehaviour, IDragHandler, IPointerUpHandler, IP
     [SerializeField] RectTransform stick = null;
     [SerializeField] Image Background = null;
     
-    float limit = 200f;
+    float limit = 100f;
     public string player = "";
 
     public void OnPointerDown(PointerEventData eventData)

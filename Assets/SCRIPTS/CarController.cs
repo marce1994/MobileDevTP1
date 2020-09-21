@@ -10,12 +10,12 @@ public class CarController : MonoBehaviour {
     float giro = 0f;
     float acel = 1f;
 
-	void FixedUpdate () {
+	void Update () {
         foreach (var wheel in throttleWheels) {
             wheel.motorTorque = throttleCoefficient * T.GetFDT() * acel;
         }
         foreach (var wheel in steeringWheels) {
-            wheel.steerAngle = maxTurn * giro;
+            wheel.steerAngle = maxTurn * (giro > 0.1f? 1 : giro < -0.1f? -1 : 0) * Time.deltaTime * 60;
         }
         giro = 0f;
     }
