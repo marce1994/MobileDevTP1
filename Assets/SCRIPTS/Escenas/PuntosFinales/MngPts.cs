@@ -93,10 +93,7 @@ public class MngPts : MonoBehaviour
                 ActivadoAnims = true;
             }
         }
-    }
 
-    void OnGUI()
-    {
         if (ActivadoAnims)
         {
             SetDinero();
@@ -112,7 +109,7 @@ public class MngPts : MonoBehaviour
                 winner.text = "PLAYER #2 IS THE WINNER";
                 break;
             case DatosPartida.Lados.Izq:
-                winner.text = "PLAYER #2 IS THE WINNER";
+                winner.text = "PLAYER #1 IS THE WINNER";
                 break;
         }
     }
@@ -143,7 +140,7 @@ public class MngPts : MonoBehaviour
 
     void SetCartelGanador()
     {
-        winner.text = "";
+        //winner.text = "";
     }
 
     public void DesaparecerGUI()

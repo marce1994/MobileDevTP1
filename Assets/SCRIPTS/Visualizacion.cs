@@ -103,7 +103,6 @@ public class Visualizacion : MonoBehaviour
             case Player.Estados.EnTutorial:
                 SetInv3();
                 SetTuto();
-                SetVolante();
                 break;
         }
 

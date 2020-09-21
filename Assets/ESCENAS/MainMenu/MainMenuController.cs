@@ -47,11 +47,12 @@ public class MainMenuController : MonoBehaviour
     void OnCreditsButton()
     {
         Debug.Log("OnCreditsButton");
+        SceneManager.LoadScene(3);
     }
 
     void OnExitButton()
     {
-        Application.Quit();
         Debug.Log("OnExitButton");
+        Application.Quit();
     }
 }
