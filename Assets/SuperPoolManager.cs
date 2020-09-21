@@ -2,21 +2,23 @@
 using System.Linq;
 using UnityEngine;
 
-public class SuperPoolManager : MonoBehaviour
+public class SuperPoolManager
 {
     private Dictionary<string, List<GameObject>> _pool;
 
-    static InputManager instance = null;
+    static SuperPoolManager instance = null;
 
-    public GameObject[] gameObjects;
+    GameObject[] gameObjects;
 
-    public static InputManager Instance
+    public static SuperPoolManager Instance
     {
         get
         {
             if (instance == null)
             {
-                instance = new InputManager();
+                instance = new SuperPoolManager();
+                instance.gameObjects = Resources.LoadAll<GameObject>("");
+                Debug.Log(instance.gameObjects.Length);
             }
 
             return instance;
@@ -27,12 +29,22 @@ public class SuperPoolManager : MonoBehaviour
     {
         if (_pool == null)
             _pool = new Dictionary<string, List<GameObject>>();
-        if (_pool[type] == null)
-            _pool[type] = new List<GameObject>();
+        if (!_pool.ContainsKey(type))
+            _pool.Add(type, new List<GameObject>());
 
-        var objectToReturn = _pool[type].FirstOrDefault(x => x.activeSelf == false);
+        var objectToReturn = _pool[type].FirstOrDefault(x => !x.activeSelf);
+
         if (objectToReturn == null)
-            objectToReturn = Instantiate(gameObjects.Single(x => x.name == type));
+        {
+            objectToReturn = GameObject.Instantiate(gameObjects.Single(x => x.name == type));
+            _pool[type].Add(objectToReturn);
+        }
+        
+        objectToReturn.SetActive(true);
+        var rigidbody = objectToReturn.GetComponent<Rigidbody>();
+        if (rigidbody != null)
+            rigidbody.Sleep();
+
         return objectToReturn;
     }
 

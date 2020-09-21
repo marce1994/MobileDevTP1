@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Visualizacion : MonoBehaviour 
@@ -98,6 +99,7 @@ public class Visualizacion : MonoBehaviour
                 break;
             case Player.Estados.EnDescarga:
                 SetInv3();
+				SetBonus();
                 SetDinero();
                 break;
             case Player.Estados.EnTutorial:
@@ -174,56 +176,15 @@ public class Visualizacion : MonoBehaviour
 	
 	void SetBonus()
 	{
-		if(Pj.ContrDesc.PEnMov != null)
-		{
-			//el fondo
-			GUI.skin = GS_FondoFondoBonusColor;
-			
-			R.width = ColorFondoFondoEsc.x *Screen.width /100;
-			R.height = ColorFondoFondoEsc.y *Screen.height /100;
-			R.x = ColorFondoFondoPos.x *Screen.width /100;
-			R.y = ColorFondoFondoPos.y *Screen.height /100;
-			if(LadoAct == Visualizacion.Lado.Der)
-				R.x += (Screen.width)/2;			
-			GUI.Box(R, "");
-			
-			
-			//el fondo
-			GUI.skin = GS_FondoBonusColor;
-			
-			R.width = ColorFondoEsc.x *Screen.width /100;
-			R.height = (ColorFondoEsc.y *Screen.height /100) * (Pj.ContrDesc.Bonus / (int)Pallet.Valores.Valor2);
-			R.x = ColorFondoPos.x *Screen.width /100;
-			R.y = (ColorFondoPos.y *Screen.height /100) - R.height;
-			if(LadoAct == Visualizacion.Lado.Der)
-				R.x += (Screen.width)/2;			
-			GUI.Box(R, "");
-			
-			
-			//la bolsa
-			GUI.skin = GS_Bonus;
-		
-			R.width = BonusEsc.x *Screen.width /100;
-			R.height = R.width /2;
-			R.x = BonusPos.x *Screen.width /100;
-			R.y = BonusPos.y *Screen.height /100;
-			if(LadoAct == Visualizacion.Lado.Der)
-				R.x += (Screen.width)/2;
-			GUI.Box(R, "     $" + Pj.ContrDesc.Bonus.ToString("0"));
-		}
+		if (Pj.ContrDesc.PEnMov != null)
+			CanvasGameplayController.Instance.SetBonus(Pj, (Pj.ContrDesc.Bonus / (int)Pallet.Valores.Valor2) * 2.5f, "$" + Pj.ContrDesc.Bonus.ToString("0"));
+        else
+			CanvasGameplayController.Instance.BonusActive(Pj, false);
 	}
 	
 	void SetDinero()
 	{
-		GUI.skin = GS_Din;
-		
-		R.width = DinEsc.x *Screen.width /100;
-		R.height = DinEsc.y *Screen.height /100;
-		R.x = DinPos[0].x *Screen.width /100;
-		R.y = DinPos[0].y *Screen.height /100;
-		if(LadoAct == Visualizacion.Lado.Der)
-			R.x = DinPos[1].x *Screen.width /100;
-		GUI.Box(R, "$" + PrepararNumeros(Pj.Dinero));
+		CanvasGameplayController.Instance.SetDinero(Pj, "$" + PrepararNumeros(Pj.Dinero));
 	}
 	
 	void SetCalibr()
@@ -346,79 +307,33 @@ public class Visualizacion : MonoBehaviour
 	
 	void SetInv3()
 	{
-		GUI.skin = GS_Inv;
-		
-		R.width = FondoEsc.x * Screen.width /100;
-		R.height = FondoEsc.y * Screen.width /100;
-		R.x = FondoPos[0].x * Screen.width /100;
-		R.y = FondoPos[0].y * Screen.height /100;
-		
 		int contador = 0;
 		for(int i = 0; i < 3; i++)
 		{
 			if(Pj.Bolasas[i]!=null)
 				contador++;
 		}
-		
-		if(LadoAct == Visualizacion.Lado.Der)
-		{
-			R.x = FondoPos[1].x * Screen.width /100;
-			
-			if(contador < 3)
-				GS_Inv.box.normal.background = TextInvDer[contador];
-			else
-			{
-				TempParp += T.GetDT();
-				
-				if(TempParp >= Parpadeo)
-				{
-					TempParp = 0;
-					if(PrimIma)
-						PrimIma = false;
-					else
-						PrimIma = true;
-				}
-				
-				if(PrimIma)
-				{
-					GS_Inv.box.normal.background = TextInvDer[3];
-				}
-				else
-				{
-					GS_Inv.box.normal.background = TextInvDer[4];
-				}
-				
-			}
-		}
+
+		if (contador < 3)
+			CanvasGameplayController.Instance.SetTexture(Pj, Pj.IdPlayer == 1? TextInvDer[contador] : TextInvIzq[contador]);
 		else
 		{
-			if(contador < 3)
-				GS_Inv.box.normal.background = TextInvIzq[contador];
-			else
+			TempParp += T.GetDT();
+
+			if (TempParp >= Parpadeo)
 			{
-				TempParp += T.GetDT();
-				
-				if(TempParp >= Parpadeo)
-				{
-					TempParp = 0;
-					if(PrimIma)
-						PrimIma = false;
-					else
-						PrimIma = true;
-				}
-				
-				if(PrimIma)
-				{
-					GS_Inv.box.normal.background = TextInvIzq[3];
-				}
+				TempParp = 0;
+				if (PrimIma)
+					PrimIma = false;
 				else
-				{
-					GS_Inv.box.normal.background = TextInvIzq[4];
-				}
+					PrimIma = true;
 			}
+
+			if (PrimIma)
+				CanvasGameplayController.Instance.SetTexture(Pj, Pj.IdPlayer == 1? TextInvDer[3] : TextInvIzq[3]);
+			else
+				CanvasGameplayController.Instance.SetTexture(Pj, Pj.IdPlayer == 1? TextInvDer[4] : TextInvIzq[4]);
 		}
-		
-		GUI.Box(R,"");
 	}
 	
 	public string PrepararNumeros(int dinero)

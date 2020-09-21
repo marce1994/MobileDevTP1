@@ -15,7 +15,7 @@ public class CarController : MonoBehaviour {
             wheel.motorTorque = throttleCoefficient * T.GetFDT() * acel;
         }
         foreach (var wheel in steeringWheels) {
-            wheel.steerAngle = maxTurn * (giro > 0.1f? 1 : giro < -0.1f? -1 : 0) * Time.deltaTime * 60;
+            wheel.steerAngle = maxTurn * giro;
         }
         giro = 0f;
     }

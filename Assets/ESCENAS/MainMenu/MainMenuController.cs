@@ -14,7 +14,7 @@ public class MainMenuController : MonoBehaviour
 
         Button SinglePlayerButton = buttons.Single(x => x.name == "SinglePlayer");
         Button MultiPlayerButton = buttons.Single(x => x.name == "MultiPlayer");
-        //Button SettingsButton = buttons.Single(x => x.name == "Settings");
+        Button SettingsButton = buttons.Single(x => x.name == "Settings");
         Button CreditsButton = buttons.Single(x => x.name == "Credits");
         Button ExitButton = buttons.Single(x => x.name == "Exit");
         Button ImageButton = buttons.Single(x => x.name == "Image");
@@ -23,27 +23,30 @@ public class MainMenuController : MonoBehaviour
 
         SinglePlayerButton.onClick.AddListener(OnSinglePlayerButton);
         MultiPlayerButton.onClick.AddListener(OnMultiPlayerButton);
-        //SettingsButton.onClick.AddListener(OnSettingsButton);
+        SettingsButton.onClick.AddListener(OnSettingsButton);
         CreditsButton.onClick.AddListener(OnCreditsButton);
         ExitButton.onClick.AddListener(OnExitButton);
     }
 
     void OnSinglePlayerButton()
     {
-        // TODO set player count
-        SceneManager.LoadSceneAsync(1);
+        var gameobject = SuperPoolManager.Instance.GetGameobject("SinglePlayer");
+        gameobject.transform.position = Vector3.zero;
         Debug.Log("OnSinglePlayerButton");
     }
     void OnMultiPlayerButton()
     {
-        // TODO set player count
         SceneManager.LoadSceneAsync(1);
         Debug.Log("OnMultiPlayerButton");
     }
-    //void OnSettingsButton()
-    //{
-    //    Debug.Log("OnSettingsButton");
-    //}
+
+    void OnSettingsButton()
+    {
+        var gameobject = SuperPoolManager.Instance.GetGameobject("Settings");
+        gameobject.transform.position = Vector3.zero;
+        Debug.Log("OnSettingsButton");
+    }
+
     void OnCreditsButton()
     {
         Debug.Log("OnCreditsButton");
