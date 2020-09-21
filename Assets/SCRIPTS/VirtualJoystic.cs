@@ -12,7 +12,6 @@ public class VirtualJoystic : MonoBehaviour, IDragHandler, IPointerUpHandler, IP
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        //Background.color = Color.red;
         stick.anchoredPosition = ConvertToLocal(eventData);
     }
 
@@ -32,7 +31,6 @@ public class VirtualJoystic : MonoBehaviour, IDragHandler, IPointerUpHandler, IP
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        //Background.color = Color.gray;
         stick.anchoredPosition = Vector2.zero;
         SetHorizontal(0);
         SetVertical(0);

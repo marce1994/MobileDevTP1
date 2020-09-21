@@ -49,7 +49,7 @@ public class InputManager
         return GetOrAddAxis(axis) + Input.GetAxis(axis);
 #elif UNITY_ANDROID || UNITY_IOS
         return GetOrAddAxis(axis);
-#elif UNITY_STANDAOLNE
+#elif UNITY_STANDALONE
         return Input.GetAxis(axis);
 #endif
     }
@@ -68,7 +68,7 @@ public class InputManager
         return Input.GetButtonDown(button) || GetOrAddButtonState(button) == ButtonStates.Down;
 #elif UNITY_ANDROID || UNITY_IOS
         return GetOrAddButtonState(button) == ButtonStates.Down;
-#elif UNITY_STANDAOLNE
+#elif UNITY_STANDALONE
         return Input.GetButtonDown(button);
 #endif
     }
@@ -79,7 +79,7 @@ public class InputManager
         return Input.GetButtonUp(button) || GetOrAddButtonState(button) == ButtonStates.Up;
 #elif UNITY_ANDROID || UNITY_IOS
         return GetOrAddButtonState(button) == ButtonStates.Up;
-#elif UNITY_STANDAOLNE
+#elif UNITY_STANDALONE
         return Input.GetButtonUp(button);
 #endif
     }
@@ -90,7 +90,7 @@ public class InputManager
         return Input.GetButton(button) || GetOrAddButtonState(button) == ButtonStates.Pressed;
 #elif UNITY_ANDROID || UNITY_IOS
         return GetOrAddButtonState(button) == ButtonStates.Pressed;
-#elif UNITY_STANDAOLNE
+#elif UNITY_STANDALONE
         return Input.GetButton(button);
 #endif
     }
