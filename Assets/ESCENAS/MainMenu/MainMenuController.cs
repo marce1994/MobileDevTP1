@@ -12,8 +12,8 @@ public class MainMenuController : MonoBehaviour
     {
         buttons = GetComponentsInChildren<Button>().ToList();
 
-        Button SinglePlayerButton = buttons.Single(x => x.name == "SinglePlayer");
-        Button MultiPlayerButton = buttons.Single(x => x.name == "MultiPlayer");
+        Button EasyModeButton = buttons.Single(x => x.name == "SinglePlayer");
+        Button HardModeButton = buttons.Single(x => x.name == "MultiPlayer");
         Button SettingsButton = buttons.Single(x => x.name == "Settings");
         Button CreditsButton = buttons.Single(x => x.name == "Credits");
         Button ExitButton = buttons.Single(x => x.name == "Exit");
@@ -21,23 +21,24 @@ public class MainMenuController : MonoBehaviour
 
         ImageButton.Select();
 
-        SinglePlayerButton.onClick.AddListener(OnSinglePlayerButton);
-        MultiPlayerButton.onClick.AddListener(OnMultiPlayerButton);
+        EasyModeButton.onClick.AddListener(OnEasyModeButton);
+        HardModeButton.onClick.AddListener(OnHardModeButton);
         SettingsButton.onClick.AddListener(OnSettingsButton);
         CreditsButton.onClick.AddListener(OnCreditsButton);
         ExitButton.onClick.AddListener(OnExitButton);
     }
 
-    void OnSinglePlayerButton()
+    void OnEasyModeButton()
     {
-        var gameobject = SuperPoolManager.Instance.GetGameobject("SinglePlayer");
-        gameobject.transform.position = Vector3.zero;
-        Debug.Log("OnSinglePlayerButton");
-    }
-    void OnMultiPlayerButton()
-    {
+        Config.isHardMode = false;
+        Debug.Log("OnEasyModeButton");
         SceneManager.LoadSceneAsync(1);
-        Debug.Log("OnMultiPlayerButton");
+    }
+    void OnHardModeButton()
+    {
+        Config.isHardMode = true;
+        Debug.Log("OnHardModeButton");
+        SceneManager.LoadSceneAsync(1);
     }
 
     void OnSettingsButton()
@@ -58,4 +59,8 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("OnExitButton");
         Application.Quit();
     }
+}
+
+public static class Config {
+    public static bool isHardMode = false;
 }
