@@ -77,10 +77,10 @@ public class TaxiComp : MonoBehaviour
 				}
 			}
 		}
-		
-		
-	} 
-	
+
+		this.transform.position += transform.forward * Time.deltaTime * Vel;
+	}
+
 	void OnTriggerEnter(Collider coll)
 	{
 		if(coll.tag == FinTaxiTag)
@@ -96,11 +96,6 @@ public class TaxiComp : MonoBehaviour
 		{
 			Respawneando = true;
 		}
-	}
-	
-	void FixedUpdate () 
-	{
-		this.transform.position += transform.forward * Time.fixedDeltaTime * Vel;
 	}
 	
 	//--------------------------------------------------------------------//

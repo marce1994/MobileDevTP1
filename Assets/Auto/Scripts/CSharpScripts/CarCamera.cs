@@ -23,7 +23,7 @@ public class CarCamera : MonoBehaviour
 		raycastLayers = ~ignoreLayers;
 	}
 
-	void FixedUpdate()
+	void Update()
 	{
 		currentVelocity = Vector3.Lerp(prevVelocity, target.root.GetComponent<Rigidbody>().velocity, velocityDamping * Time.deltaTime);
 		currentVelocity.y = 0;

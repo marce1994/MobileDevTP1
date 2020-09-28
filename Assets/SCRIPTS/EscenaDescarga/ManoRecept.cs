@@ -4,7 +4,7 @@ public class ManoRecept : ManejoPallets
 {
 	public bool TengoPallet = false;
 	
-	void FixedUpdate () 
+	void Update () 
 	{
 		TengoPallet = Tenencia();
 	}

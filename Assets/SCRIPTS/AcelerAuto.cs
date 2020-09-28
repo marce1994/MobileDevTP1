@@ -11,11 +11,6 @@ public class AcelerAuto : MonoBehaviour
 	bool Avil = true;
 	public float TiempRecColl = 0;
 	float Tempo = 0;
-
-	void Start () 
-	{
-	
-	}
 	
 	void Update ()
 	{
@@ -28,18 +23,16 @@ public class AcelerAuto : MonoBehaviour
 				Avil = false;
 			}
 		}
-	}
-	
-	void FixedUpdate () 
-	{
-		if(Velocidad < VelMax)
+
+		if (Velocidad < VelMax)
 		{
-			Velocidad += AcelPorSeg * Time.fixedDeltaTime;
+			Velocidad += AcelPorSeg * Time.deltaTime;
 		}
-		
+
 		GetComponent<Rigidbody>().AddForce(this.transform.forward * Velocidad);
 	}
 	
+
 	 void OnCollisionEnter(Collision collision)
 	{
 		if(!Avil)
